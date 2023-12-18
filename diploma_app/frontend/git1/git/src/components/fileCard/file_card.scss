@@ -1,0 +1,31 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.file-box{
+    @include size(900,250);
+    @include margin(10,0,10,0);
+    border: find-size(4, 100vh, $width-main) $font_color solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    &__img{
+        @include height(200);
+    }
+    &__buttn-delete{
+        @include margin(10,10,10,10);
+        @include size(200,50);
+        background-color: $font_color;
+        border-radius: border_rad(30);
+        @include font_size(27,37);
+        color: $background;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+    &__text{
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+}

@@ -1,0 +1,73 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.treatment-card{
+    position: relative;
+    overflow: hidden;
+    @include width(1510);
+    @include margin(44,0,44,0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $trtmnt_bckgr;
+    border-radius: border_rad(34);
+    &__text{
+        &-title{
+        @include font_size(37,50);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        }
+        &-data{
+            @include font_size(48,72);
+            color: $main_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+    }
+    &__left-wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        @include margin(60,0,60,80);
+        z-index: 12;
+    }
+    &__feather_first{
+        @include size(490,490);
+        position: absolute;
+        z-index: 10;
+        @include position_l_b(-141,-150);
+    }
+    &__feather_second{
+        @include size(490,490);
+        position: absolute;
+        z-index: 10;
+        transform: rotate(110.28deg);
+        @include position_t_l(-213, 1090);
+    }
+    &__buttns_wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 12;        
+    }
+}
+.buttn{
+    &_delete{
+        @include size(74,74);
+        background-image: url('../../images/icons/svges/cancel_x5F_badge.svg');
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border:0;
+        background-size: find-size(74, 100vw, $width-main) find-size(74, 100vh, $height-main);
+    }
+    &_edit{
+        @include size(74,74);
+        background-image: url('../../images/icons/svges/edit_x5F_badge.svg');
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border:0;
+        background-size: find-size(74, 100vw, $width-main) find-size(74, 100vh, $height-main);
+    }
+}

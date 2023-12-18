@@ -1,0 +1,80 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.accesses{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: find-size(500,100vh,$height-main);
+    height: fit-content;
+    @include margin(180,0,50,0);
+    &__searching{
+        @include width(1780);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        @include margin(0,30,21,0);
+        align-items: center;
+    }
+    &__input-search{
+        @include margin(0,10,0,0);
+        @include size(366,62);
+        border-radius: border_rad(40);
+        border: 0;
+        @include padding(0,10,0,25);
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        background-color: $form_input_color;        
+    }
+    &__buttn-search{
+        @include size(80,62);
+        border-radius: border_rad(30);
+        @include font_size(17,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        &:hover{
+            background-color: $font_color;
+            color: $background;
+        }
+    }
+    &__diaries{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    &__buttons{
+        @include size(378,100);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &_left{
+            background-image: url('../../images/icons/svges/arroeButtn.svg');
+            background-size: find-size(87.13, 100vw, $width-main) find-size(94.34,100vh, $height-main );
+            @include size(87.13,94.34);
+            background-color: transparent;
+            transform: matrix(-1, -0.01, 0.01, -1, 0, 0);
+            background-repeat: no-repeat;
+            &:hover{
+                background-image: url('../../images/icons/svges/arrowButtn_pressed.svg');
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+        }
+        &_right{
+            background-repeat: no-repeat;
+            background-image: url('../../images/icons/svges/arroeButtn.svg');
+            @include size(87.13,94.34);
+            background-size: find-size(87.13, 100vw, $width-main) find-size(94.34,100vh, $height-main );
+            background-color: transparent;
+            &:hover{
+                background-image: url('../../images/icons/svges/arrowButtn_pressed.svg');
+                transform: matrix(-1, -0.01, 0.01, -1, 0, 0);
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.main{
+    @include margin(159,0,0,0);
+}
+.presentation{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    &__left{
+        height: fit-content;
+        width: find-size(735, 100vw, $width-main);
+        @include margin(299, 59.83, 136, 91);
+    }
+    &__headline-wrap{
+        display: flex;
+        flex-direction: column;
+        @include margin(0,0,103,0);
+    }
+    &__headline_first{
+        @include font_size(106,137);
+        color: $font_color;
+        font-weight: 700;
+        font-family: Volkhov;
+    }
+    &__headline_second{
+        @include font_size(83,107);
+        color: $main_color;
+        font-weight: 700;
+        font-family: Volkhov;
+    }
+    &__list{       
+        &-wrap{
+            @include margin(54,21,54,21);
+        }
+        &-items_wrap{
+            @include size(699, 0);
+            border: solid $main_color find_size(10, 100vw, $width-main);
+            border-radius: border_rad(33);
+            @include padding(0,0,0,21);
+            height:fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &-item{
+            &_text{
+                @include font_size(38,49);
+                color: $font_color;
+                font-weight: 700;
+                font-family: Volkhov;  
+            }
+            color: $font_color;
+            list-style-type: disc;            
+        }
+    }
+    &__right{
+        position: relative;
+        overflow: hidden;
+        @include width(900.17);
+        min-height: find-size(1292, 100vh, $height-main);
+        height: fit-content;
+    }
+    &__photo{
+        @include size(842,1092);
+        position: absolute;
+        z-index: 2;
+        right:0;
+        &-back{
+            left: find-size(170, 100vw, $width-main);
+            top: find-size(90, 100vh, $height-main);;
+            @include size(832.39,862.01);
+            position: absolute;           
+            z-index: 1;
+            background-color: transparent;
+            border: solid find-size(10,100vw,$width-main) $main_color;
+            border-radius: border_rad(33);
+            transform: rotate(39.51deg);
+        }
+    } 
+}

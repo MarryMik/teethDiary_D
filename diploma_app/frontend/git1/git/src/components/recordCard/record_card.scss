@@ -1,0 +1,93 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.record-card{
+    position: relative;
+    @include margin(44,0,44,0);
+    overflow: hidden;
+    @include width(1510);
+    background-color: $record_bcrgr;
+    border-radius: border_rad(34);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include padding(46,0,27,0);
+    &__left{
+        @include width(1168);
+        @include margin(0,0,0,102);
+        z-index: 12;
+    }
+    &__field-wrap{
+        display: flex;
+        flex-direction: row;
+    }
+    &__text{
+        &_title{
+        @include font_size(37,50);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        &-primary{
+            @include margin(10,304,0,0);
+        }
+        &-secondary{
+            @include margin(10,297,0,0);
+        }
+        &-tertiary{
+            @include margin(10,267,0,0);
+        }
+        &-quaternary{
+            @include margin(10,103,0,0);
+        }
+        &-fifth{
+            @include margin(10,261,0,0);
+        }
+        }
+        &_data{
+            @include font_size(48,72);
+            color: $main_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+    }
+    &__feather_first{
+        @include size(490,490);
+        position: absolute;
+        z-index: 10;
+        @include position_l_b(-138,-48);
+    }
+    &__feather_second{
+        @include size(490,490);
+        position: absolute;
+        z-index: 10;
+        transform: rotate(110.28deg);
+        @include position_t_l(-113, 1090);
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 12;
+        align-items: flex-end;
+    }
+    &__rating-wrap{
+        @include size(182, 182);
+        position: relative;
+    }
+}
+.rating{
+    &__text{
+        position: absolute;
+        @include font_size(49,67);
+        color: $main_color;
+        font-weight: 800;
+        font-family: OpenSans;
+        @include position_t_l(57,77); 
+    }
+    &__icon{
+        position: absolute;
+        left:0;
+        top:0;
+        @include size(182, 182);
+    }
+}

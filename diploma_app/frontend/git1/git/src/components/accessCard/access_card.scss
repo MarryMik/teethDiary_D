@@ -1,0 +1,28 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.access{
+    @include width(277);
+    min-height: find-size(306,100vh,$height-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $form_input_color;
+    border-radius: border_rad(40);
+    @include margin(35,35,35,35);
+    &__name{
+        @include width(198);
+        @include margin(0,0,25,0);
+        text-align: center;
+    }
+    &__text{
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;   
+    }
+    &:hover{
+        background-color: $form_back_color;
+    } 
+}

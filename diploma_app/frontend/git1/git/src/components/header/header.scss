@@ -1,0 +1,121 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.nav-bar{
+    &__wrap{
+        @include height( 160);
+        width: 100%;
+        background-color: $main_color;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+    }
+    @include size(1601,91.43);
+    @include margin(25, 0, 24, 154);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &__link{
+        &:hover{
+            border: find_size(3,100vh,$height-main) solid $background;
+            border-radius: border_rad(40);
+        }
+        border: find_size(3,100vh,$height-main) solid transparent;
+        border-radius: border_rad(30);
+        @include padding(11,21,11,21);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-text{
+            text-align: center;
+            font-family: OpenSans;
+            font-weight: 400;
+            @include font_size(27, 36.77);
+            color: $background;
+            &:hover{
+                color: $pressed_buttton-color;
+            }
+            &:hover{
+                color: $pressed_buttton-color;
+            }
+        }
+    }
+    &__links{
+        &-wrap{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include size(900,21.55);
+        @include margin(0, 174, 0, 0);
+       &_third-type{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @include size(600,21.55);
+            @include margin(0, 474, 0, 0);
+        }
+    }
+    &__logo{
+        @include size(201.45,91.43);
+    }
+    &__button{
+        &-wrap{
+            display:flex;
+            justify-content: space-around;
+        }
+        &_account{
+            @include size(66, 66);
+            background-image: url('../../images/icons/svges/account_circle_icon\ \(2\).svg');
+            background-color: transparent;
+            background-repeat: no-repeat;
+            @include margin(0, 61, 0, 0);
+            &:hover{
+                background-image: url('../../images/icons/svges/account_circle_icon\ \(1\).svg');
+            }
+        }
+        &_exit{
+            @include size(66, 66);
+            background-image: url('../../images/icons/svges/app_exit_to_icon.svg');
+            background-color: transparent;
+            background-repeat: no-repeat;
+            &:hover{
+                background-image: url('../../images/icons/svges/app_exit_to_icon_prpl.svg');
+                background-repeat: no-repeat;  
+            }
+        }
+        &_login{
+            @include size(175, 65);
+            background-color: transparent;
+            border-radius: border_rad(20);
+            &:hover{
+                background-color: $form_back_color;
+             }
+             @include margin(0, 20, 0, 0);
+        }
+        &_sign-up{
+            @include size(185, 65);
+            border-radius: border_rad(20);
+            border: find_size(4, 100vw, $width-main) $background solid;
+            background-color: transparent;
+            &:hover{
+                background-color: $form_back_color;
+             }
+        }
+        &-text{
+            font-family: OpenSans;
+            font-weight: 400;
+            color: $background;
+            @include font_size(27, 37);
+        }
+    }
+}
+.burger-menu{
+    display:none;
+}

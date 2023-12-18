@@ -1,0 +1,77 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+
+.brushing-card{
+    @include size(1555,120);
+    @include margin(10,0,10,0);
+    background-color: $form_input_color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: border_rad(30);
+    align-items: center;
+    &__text{
+        @include font_size(41,56);
+        color: $font_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        &-wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            &_primary{
+                @include width(210);
+                @include margin(0,0,0,23);
+            }
+            &_secondary{
+                @include width(161);
+            }
+            &_tertiary{
+                @include width(179);
+            }
+            &_quanternary{
+                @include width(247);
+            }
+            &_fifth{
+                @include width(337);
+            }
+        } 
+    }
+    &__img{
+        @include size(56,56);
+    }
+    &__circle-count{
+        @include size(56,56);
+        background-image: url("../../images/icons/svges/blank_check_circle_icon.svg");
+        background-repeat: no-repeat;
+        background-size: find-size(56, 100vw, $width-main) find-size(56, 100vh, $height-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__circle-text{
+        @include font_size(41,56);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+    }
+    &__buttns-wrap{
+        display: flex;
+        flex-direction: row;
+        @include margin (0,18,0,0);
+    }
+    &__buttn_delete{
+        @include size(49,49);
+        @include margin(0,12,0,0);
+        background-repeat: no-repeat;
+        background-size: find-size(49, 100vw, $width-main) find-size(49, 100vh, $height-main);
+    }
+    &__buttn_edit{
+        @include size(49,49);
+        background-repeat: no-repeat;
+        background-size: find-size(49, 100vw, $width-main) find-size(49, 100vh, $height-main);
+    }
+    @include margin(0,0,80,0);
+}

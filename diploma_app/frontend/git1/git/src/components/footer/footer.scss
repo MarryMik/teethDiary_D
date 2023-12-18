@@ -1,0 +1,63 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.footer{
+    width: 100%;
+    @include height(301);
+    background-color: $main_color;
+    &__upper-part{
+        display: flex;
+        flex-direction: row;
+    }
+    &__logo{
+        @include size(291,132);
+        @include margin(19, 32, 77, 62);
+    }
+    &__slogan{
+        @include size(328,111);
+        @include margin(32, 181, 0, 0);
+    }
+    &__right{
+        display: flex;
+        flex-direction: row;
+    }
+    &__links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        @include size(782,40);
+        align-items: center;
+        @include margin(42, 112,0,0);
+        &-text{
+            @include font_size(27,37);
+            color: $background;
+            font-weight: 400;
+            font-family: OpenSans;
+        }
+        &_bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            @include size(250,40);
+            align-items: center;
+            @include margin(175, 23,16,608);
+        }
+    }
+    &__bottom{
+        display: flex;
+        justify-content: center;
+        @include margin (17,0,0,0);
+        &-text{
+            @include font_size(18,25);
+            color: $background;
+            font-weight: 400;
+            font-family: OpenSans;
+        }
+    }
+}
+.slogan__text{
+    @include font_size(27,36.77);
+    color: $background;
+    font-weight: 400;
+    font-family: OpenSans;
+}

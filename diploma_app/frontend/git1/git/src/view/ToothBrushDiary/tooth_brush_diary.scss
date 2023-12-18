@@ -1,0 +1,168 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.active-brush{
+    width: 100%;
+    @include margin(221,0,0,0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__wrap{
+        @include width(1574);
+        min-height: find-size(1125, 100vh, $height-main);
+        height: fit-content;
+        background-color:$form_input_color;
+        border-radius: border_rad(30);
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        @include width(557);
+        position: relative;
+    }
+    &__img{
+        @include size(655,1440);
+        position: absolute;
+        @include position_t_l(-157, -98);
+    }
+    &__right{
+       @include size(765,705);
+       @include padding(91, 108,0,0);
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       min-height: find-size(1034, 100vh, $height-main);
+        height: fit-content;
+    }
+    &__boxes-wrap{
+        display: flex;
+        flex-direction: column;
+        @include width(765);
+        height: fit-content;
+    }
+    &__buttn-wrap{
+        @include width(873);
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__buttn-add{
+        @include size(205,98);
+        border: 0;
+        border-radius: border_rad(30);
+        background-color: $font_color;
+        @include font_size(38,52);
+        color: $background;
+        font-weight: 700;
+        font-family: OpenSans;
+        @include margin(0,128,55,0);
+    }
+}
+.brushes{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include margin(0,0,50,0);
+    &__text_header{
+        @include font_size(37,50);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+        &-wrap{
+            display: flex;
+            flex-direction: row;
+            @include margin(100,0,24,25);
+            @include width(1553);
+        }
+    }
+    .__history{
+        @include width(1553);
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.new-toothbrush{
+    position: absolute;
+    @include position_t_l(450,300);
+    @include size(1201,715);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $form_back_color;
+    border-radius: border_rad(40);
+    display: none;
+    &__header-wrap{
+        @include width(1013);
+        display: flex;
+        justify-content: flex-end;
+        @include margin(22,0,58,0);
+    }
+    &__text{
+        &_header{
+            @include font_size(40,54);
+            color: $font_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+        &_title{
+            @include font_size(30,41);
+            color: $font_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+    }
+    &__input-wrap{
+        @include size(1013, 68);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include margin(0,0,32,50);
+        align-items: center;
+    }
+    &__input{
+        @include size(736,68);
+        border: 0;
+        border-radius: border_rad(30);
+        background-color: $pressed_buttton-color;
+        @include padding(0,10,0,25);
+        @include font_size(28,41);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        z-index: 20;
+    }
+    &__buttn-wrap{
+        @include width(1013);
+        @include margin(0,0,0,50);
+        display: flex;
+        justify-content: flex-end;        
+    }
+    &__buttn{
+        @include size(260,58);
+        background-color: $main_color;
+        border: 0;
+        border-radius: border_rad(30);
+        @include font_size(31,42);
+        color: $background;
+        font-weight: 700;
+        font-family: OpenSans;
+        z-index: 30;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__img{
+        position: absolute;
+        @include position_l_b(-20,-40);
+        
+        @include width(1100);
+        &-wrap{
+            @include height(184);
+            @include width(1000);
+            position: relative;
+        }
+    }
+}

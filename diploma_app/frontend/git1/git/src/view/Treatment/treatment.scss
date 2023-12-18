@@ -1,0 +1,110 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.treatment{
+    width: 100%;
+    @include margin(221,0,0,0);
+    &-wrap{
+        @include margin(0,60,60,60);
+        border-radius: border_rad(30);
+        @include width(1676);
+        border: find-size(4,100vw,$width-main) solid $main_color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include padding(35,0,50,0);
+    }
+    &__text_header{
+        @include font_size(40,54);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+        @include margin(0,0,26,0);
+    }
+    &__input-wrap{
+        @include size(1461, 88);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include margin(0,0,77,0);
+    }
+    &__text_title{
+        @include font_size(40,54);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+    }
+    &__input{
+        border-radius: border_rad(30);
+        background-color: $form_input_color;
+        border: 0;
+        @include font_size(30,32.68);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        @include padding(0,15,0,25);
+        &_name{
+            @include size(1202,88);
+        }
+        &_start-date{
+            @include size(402,88);
+        }
+        &_end-date{
+            @include size(402,88);
+        }
+    }
+    &__period-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include size(1202,88);
+    }
+    &__date_wrap{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include width(500);
+    }
+    &__record_wrap{
+        @include width(1461);
+        display: flex;
+        align-items: center;
+    }
+    &__text_record{
+        @include margin(0,140,0,0);
+    }
+    &__buttn{
+        background-color: $main_color;
+        @include size(240,73);
+        border: 0;
+        border-radius: border_rad(30);
+        &-wrap{
+            @include width(1461);
+            display: flex;
+            justify-content: flex-end;
+        }
+        &-text_save{
+            @include font_size(35,47.66);
+            color: $background;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+    }
+}
+.buttn{
+    &__record{
+    @include size(370,88);
+    border-radius: border_rad(40);
+    border: find-size(9, 100vw, $width-main) solid $font_color; 
+    background-color: transparent;
+    }
+    &__text_record{
+        @include font_size(35,48);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+    }
+}

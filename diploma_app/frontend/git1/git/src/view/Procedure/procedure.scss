@@ -1,0 +1,173 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.procedure{
+    width: 100%;
+    @include margin(221,0,0,0);
+    &-wrap{
+        @include margin(0,60,60,60);
+        border-radius: border_rad(30);
+        @include width(1676);
+        border: find-size(4,100vw,$width-main) solid $main_color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include padding(35,0,50,0);
+    }
+    &__text_header{
+        @include font_size(40,54);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+        @include margin(0,0,26,0);
+    }
+    &__input-wrap{
+        @include width(1549);
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include margin(0,0,35,0);
+        &_procedures{
+            @include width(1549);
+        }
+        &_buttn{
+            justify-content: flex-end;            
+        }
+    }
+    &__text_title{      
+        @include font_size(35,48);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+    }
+    &__input{
+        &_option{
+            @include size(1116,78);
+        }
+        &-text_wrap{
+            @include width(297);
+        }
+        @include size(1116,78);
+        background-color: $form_input_color;
+        @include padding(0,15,0,25);
+        border: 0;
+        border-radius: border_rad(30);
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;        
+        &_ocp{
+            @include width(1116);
+            border-radius: border_rad(30);
+            border: 0;
+            @include font_size(27,37);
+            color: $black_color;
+            font-weight: 400;
+            font-family: OpenSans;            
+        }        
+    }
+    &__ocp-data{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include height(200);
+        &-text{
+            @include font_size(27,37);
+            color: $black_color;
+            font-weight: 400;
+            font-family: OpenSans;
+            @include margin(10,0,0,0);
+        }
+    }
+    &__proc-data{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include height(160);
+        &-text{
+            @include font_size(27,37);
+            color: $black_color;
+            font-weight: 400;
+            font-family: OpenSans;
+            @include margin(10,0,0,0);
+        }
+    }
+}
+.form__buttn_save{
+    @include size(219,67);
+    background-color: $main_color;
+    border: 0;
+    border-radius: border_rad(30);
+    @include font_size(35,48);
+    color: $background;
+    font-weight: 700;
+    font-family: OpenSans;
+}
+.rmsc {
+    --rmsc-h: 78px;
+    --rmsc-radius: 30px;
+}
+.file-form{
+    @include width(1116);
+    border: find-size(4,100vw, $width-main) solid $main_color;
+    border-radius: border_rad(30);
+    @include padding(20,0,20,0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    &__header{
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        @include margin(20,0,30,0);
+    }
+}
+.file{
+    &__input-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include size(1000,100);
+    }
+    &__text_title{
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        &-upload{
+            @include margin(0,40,0,0);
+        }
+    }
+    &__input{
+        @include height(60);
+        border:0;
+        border-radius: border_rad(30);
+        background-color: $form_input_color;
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        @include padding(0,15,0,25);
+        @include width(750);
+        &-wrap_upload{
+            justify-content: flex-start;
+        }
+        &_upload{
+            @include width(500);
+            @include font_size(27,37);
+            color: $black_color;
+            font-weight: 400;
+            font-family: OpenSans;
+        }   
+    }
+}
+.all-files{
+    @include width(1116);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

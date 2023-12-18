@@ -1,0 +1,11 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.proc_img-file__wrap{
+    @include margin(200,10,100,10);
+    min-height: find-size(500,100vh, $height-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

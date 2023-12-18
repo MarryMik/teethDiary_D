@@ -1,0 +1,74 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.registration{
+    @include margin(253,0,140,0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    &__form{
+        @include size(1668,1586);
+        @include padding(83,0,24,0);
+        border: find-size(4, 100vw, $width-main) solid $main_color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.form{
+    &__field{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include size(1478,88);  
+    }
+    &__bottom{
+        @include width(1478);
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input{
+        @include size(796,88);
+        @include padding(0,15,0,25);
+        background-color: $form_input_color;
+        border: 0;
+        border-radius: border_rad(30);
+        @include font_size(35,48);
+        color: $font_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        &_select{
+            @include width(836);
+            appearance: none;
+            background-image: url("../../images/icons/svges/arrow_arrow\ down_down_drop_stroke\ arrow_icon.svg");
+            background-repeat: no-repeat;
+            background-repeat: find-size(73.62,100vw, $width-main) find-size(39.76, 100vh, $height-main);
+            background-position: 97%;
+        }
+    }
+    &__text{
+        @include font_size(35,48);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;
+        &_error{
+            @include font_size(35,48);
+            color: $error_color;
+            font-weight: 400;
+            font-family: OpenSans;
+        }
+    }
+    &__button{
+        @include size(268,88);
+        border: 0;
+        border-radius: border_rad(20);
+        background-color: $pressed_buttton-color;
+        @include font_size(29,39);
+        color: $font_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+}

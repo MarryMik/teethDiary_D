@@ -1,0 +1,58 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.box{
+    @include size(765, 152);
+    background-color: $main_color;
+    border-radius: border_rad(40);
+    @include margin(34,0,34,0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__permanent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__text{
+        &-wrap{
+            display: flex;
+            flex-direction: row;
+            @include margin(0,0,0,50);
+        }
+        &-wrap_left{
+            @include width(167);
+        }
+        &_title{
+            @include font_size(27,37);
+            color: $background;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+        &_data{
+            @include font_size(27,37);
+            color: $background;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+        &_termin{
+            @include font_size(37,50);
+            color: $pressed_buttton-color;
+            font-weight: 700;
+            font-family: OpenSans;  
+        }
+    }
+    &__secondary{
+        @include width(118);
+        display: flex;
+        align-items: center;
+    }
+    &__circle{
+        border-radius: 50%;
+        @include size(102,102);
+        border: $background find-size(8, 100vw, $width-main) solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

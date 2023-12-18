@@ -1,0 +1,36 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.history{
+    @include size(1553,97);
+    @include margin(23,0,23,0);
+    background-color: $pressed_buttton-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: border_rad(30);
+    &__text{
+        @include font_size(30,41);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        &_title{
+            @include margin(0,16,0,0);
+        }
+        &-wrap{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__buttns-wrap{
+        display: flex;
+    }
+    &__buttn{
+        @include size(37,37);
+        background-size: find-size(37,100vw,$width-main) find-size(37, 100vh, $height-main);
+        &_delete{
+            @include margin(0,14,0,0 );
+        }
+    }
+}

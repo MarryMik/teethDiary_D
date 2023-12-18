@@ -1,0 +1,546 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.mouth-board{
+    @include margin(221,0,0,0);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__left-wrap{@include margin(0,63,0,0);
+        @include size(780,1171);
+        position: relative;}
+    &__mouth{@include size(780,1171);
+        position: absolute;
+        z-index: 1;}
+    &__right-wrap{@include margin(65,0,0,0);
+        @include padding(13, 44, 65, 80)}
+    &__card{@include size(515,133);
+        background-color: $main_color;
+        border-radius: border_rad(30);
+        @include shadow(0,2,40,10, rgba(0, 0, 0, 0.25));
+        @include margin(52,0,52,0);
+        @include padding (0,42,0,47);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;}
+    &__text-wrap_left{@include size(386,82);
+        display: flex;
+        align-items: center;}
+    &__text-wrap_right{display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;}
+    &__text{ @include font_size(30,41);
+        color: $background;
+        font-weight: 400;
+        font-family: OpenSans; 
+        &-days_data, &-days{
+            @include font_size(36,49);
+            color: $background;
+            font-weight: 400;
+            font-family: OpenSans; } }}
+.mouth__tooth{position: absolute;
+    z-index: 2;
+    &_11{@include size(112,113);
+        left: find-size(311,100vw,$width-main);
+        top: find-size(192, 100vh, $height-main);
+        z-index: 9;}
+    &_12{@include size(112,112);
+        left: find-size(263,100vw,$width-main);
+        top: find-size(195, 100vh, $height-main);
+        z-index: 8;}
+    &_13{ @include size(111,111);
+        left: find-size(217,100vw,$width-main);
+        top: find-size(214, 100vh, $height-main);
+        z-index: 7;}
+    &_14{@include size(111,111);
+        left: find-size(182,100vw,$width-main);
+        top: find-size(248, 100vh, $height-main);
+        z-index: 6;}
+    &_15{@include size(111,112);
+        left: find-size(155,100vw,$width-main);
+        top: find-size(286, 100vh, $height-main);
+        z-index: 5;}
+    &_16{ @include size(112,112);
+        left: find-size(128,100vw,$width-main);
+        top: find-size(330, 100vh, $height-main);
+        z-index: 4;}
+    &_17{@include size(113,113);
+        left: find-size(108,100vw,$width-main);
+        top: find-size(373, 100vh, $height-main);
+        z-index: 3;}
+    &_18{@include size(113,113);
+        left: find-size(98,100vw,$width-main);
+        top: find-size(400, 100vh, $height-main);
+        z-index: 2;}
+    &_21{
+        @include size(115,115);
+        left: find-size(361,100vw,$width-main);
+        top: find-size(190, 100vh, $height-main);
+        z-index: 9;
+    }
+    &_22{
+        @include size(112,112);
+        left: find-size(409,100vw,$width-main);
+        top: find-size(195, 100vh, $height-main);
+        z-index: 8;
+    }
+    &_23{
+        @include size(112,112);
+        left: find-size(457,100vw,$width-main);
+        top: find-size(213, 100vh, $height-main);
+        z-index: 7;
+    }
+    &_24{
+        @include size(109,109);
+        left: find-size(489,100vw,$width-main);
+        top: find-size(252, 100vh, $height-main);
+        z-index: 6;
+    }
+    &_25{
+        @include size(110,110);
+        left: find-size(518,100vw,$width-main);
+        top: find-size(286, 100vh, $height-main);
+        z-index: 5;
+    }
+    &_26{
+        @include size(93,93);
+        left: find-size(547,100vw,$width-main);
+        top: find-size(338, 100vh, $height-main);
+        z-index: 4;
+    }
+    &_27{
+        @include size(96,96);
+        left: find-size(569,100vw,$width-main);
+        top: find-size(378, 100vh, $height-main);
+        z-index: 3;
+    }
+    &_28{
+        @include size(76,78);
+        left: find-size(592,100vw,$width-main);
+        top: find-size(419, 100vh, $height-main);
+        z-index: 2;
+    }
+    &_31{
+        @include size(116,116);
+        left: find-size(356,100vw,$width-main);
+        top: find-size(862, 100vh, $height-main);
+        z-index: 9;
+    }
+    &_32{
+        @include size(113,113);
+        left: find-size(397,100vw,$width-main);
+        top: find-size(864, 100vh, $height-main);
+        z-index: 8;
+    }
+    &_33{
+        @include size(115,115);
+        left: find-size(431,100vw,$width-main);
+        top: find-size(854, 100vh, $height-main);
+        z-index: 7;
+    }
+    &_34{
+        @include size(112,112);
+        left: find-size(468,100vw,$width-main);
+        top: find-size(839, 100vh, $height-main);
+        z-index: 6;
+    }
+    &_35{
+        @include size(112,112);
+        left: find-size(497,100vw,$width-main);
+        top: find-size(818, 100vh, $height-main);
+        z-index: 5;
+    }
+    &_36{
+        @include size(116,116);
+        left: find-size(528,100vw,$width-main);
+        top: find-size(778, 100vh, $height-main);
+        z-index: 4;
+    }
+    &_37{
+        @include size(111,111);
+        left: find-size(548,100vw,$width-main);
+        top: find-size(718, 100vh, $height-main);
+        z-index: 3;
+    }
+    &_38{
+        @include size(115,115);
+        left: find-size(566,100vw,$width-main);
+        top: find-size(666, 100vh, $height-main);
+        z-index: 2;
+    }
+    &_41{
+        @include size(111,111);
+        left: find-size(317,100vw,$width-main);
+        top: find-size(864, 100vh, $height-main);
+        z-index: 9;
+    }
+    &_42{
+        @include size(119,119);
+        left: find-size(273,100vw,$width-main);
+        top: find-size(861, 100vh, $height-main);
+        z-index: 8;
+    }
+    &_43{
+        @include size(115,115);
+        left: find-size(236,100vw,$width-main);
+        top: find-size(854, 100vh, $height-main);
+        z-index: 7;
+    }
+    &_44{
+        @include size(111,111);
+        left: find-size(203,100vw,$width-main);
+        top: find-size(840, 100vh, $height-main);
+        z-index: 6;
+    }
+    &_45{
+        @include size(111,112);
+        left: find-size(171,100vw,$width-main);
+        top: find-size(813, 100vh, $height-main);
+        z-index: 5;
+    }
+    &_46{
+        @include size(113,113);
+        left: find-size(144,100vw,$width-main);
+        top: find-size(779, 100vh, $height-main);
+        z-index: 4;
+    }
+    &_47{
+        @include size(114,114);
+        left: find-size(123,100vw,$width-main);
+        top: find-size(715, 100vh, $height-main);
+        z-index: 3;
+    }
+    &_48{
+        @include size(110,110);
+        left: find-size(104,100vw,$width-main);
+        top: find-size(665, 100vh, $height-main);
+        z-index: 2;
+    }
+}
+.diary{
+    @include margin(89,0,89, 0);
+    width: 100%;
+    &__filters-wrap{
+        width: 100%;
+        @include height(111);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        @include margin (0,0,67,0);
+    }
+    &__nav-panel{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__records{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        &-wrap{
+            @include margin(67,0,0,0);
+            @include width(1510);
+            height: fit-content;
+            @include padding(80, 66,80, 66);
+            border-radius: border_rad(30);
+            border: find-size(4,100vw,$width-main) $main_color solid;
+        }
+    }
+}
+.nav-panel{
+    &__arrows{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include size(298,101);     
+    }
+    &__button{
+        &-wrap{
+            @include size(999,124);
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include size(397,89);
+        border-radius: border_rad(40);
+        border: solid $font_color find-size(9, 100vw, $width-main);
+        background-color: transparent;
+        &:hover{
+            @include shadow(0, 14,30,0,rgba(0, 0, 0, 0.25));
+        }
+        &_text{
+            @include font_size(40,54);
+            color: $black_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+    }    
+}
+.buttons{
+    &__left{
+        background-image: url('../../images/icons/svges/arroeButtn.svg');
+        background-size: find-size(87.13, 100vw, $width-main) find-size(94.34,100vh, $height-main );
+        @include size(87.13,94.34);
+        background-color: transparent;
+        transform: matrix(-1, -0.01, 0.01, -1, 0, 0);
+        background-repeat: no-repeat;
+        &:hover{
+            background-image: url('../../images/icons/svges/arrowButtn_pressed.svg');
+            transform: matrix(1, 0, 0, 1, 0, 0);         
+        }
+    }
+    &__right{
+        background-repeat: no-repeat;
+        background-image: url('../../images/icons/svges/arroeButtn.svg');
+        @include size(87.13,94.34);
+        background-size: find-size(87.13, 100vw, $width-main) find-size(94.34,100vh, $height-main );
+        background-color: transparent;
+        &:hover{
+            background-image: url('../../images/icons/svges/arrowButtn_pressed.svg');
+            transform: matrix(-1, -0.01, 0.01, -1, 0, 0);
+        }
+    }
+}
+.filters__buttn{
+    @include size(419,77);    
+    border-radius: border_rad(50);
+    background-color: $form_back_color;
+    align-items: center;
+    &:hover{
+        background-color: $pressed_buttton-color;
+        @include shadow(0, 14,30,0,rgba(0, 0, 0, 0.25));
+    }
+    &-text{
+        @include font_size(37,50);
+        color: $background;
+        font-weight: 700;
+        font-family: OpenSans;
+        &:hover{
+            color: $main_color;
+        }
+    }
+}
+.button__filter{
+    @include size(89.26, 76.5);
+    background-image: url('../../images/icons/svges/filter.svg');
+    background-repeat: no-repeat;
+    background-color:transparent;
+    background-size: find-size(89.26, 100vw, $width-main) find-size(76.5, 100vh, $height-main);
+    &:hover{
+        background-image: url('../../images/icons/svges/filter_pressed.svg');
+    }
+}
+.sharing-board{
+    position: absolute;
+    @include position_t_l(1800,200);
+    z-index: 90;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__wrap{
+        @include width(1400);
+        @include padding(23,0,51,0);
+        background-color: $form_back_color;
+        border-radius: border_rad(40);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__text_header{
+        @include font_size(40,54);
+        color: $font_color;
+        font-weight: 700;
+        font-family: OpenSans;   
+        @include margin(0,0,111,0);
+    }
+    &__input-wrap{
+        @include margin(0,0,48,0);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        @include width(1227);
+    }
+    &__text_title{
+        @include font_size(28,38);
+        color: $font_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+    &__input_name{
+        @include margin(27,0,0,17);
+        @include size(1116, 68);
+        background-color: $pressed_buttton-color;
+        border-radius: border_rad(30);
+        @include padding(0,47,0,47);
+        border: 0;
+        @include font_size(28,38);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+    &__input-wrap_buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+        @include width(1227);
+    }
+    &__buttn_search{
+        @include size(260,58);
+        background-color: $main_color;
+        border-radius: border_rad(30);
+        border: 0;
+        @include font_size(31,42);
+        color: $background;
+        font-weight: 700;
+        font-family: OpenSans;
+    }
+}
+.result-box{
+    @include margin(27,0,0,0);
+    @include width(1243);
+    @include padding(10,38,38,38);
+    background-color: $background;
+    &__text_header{
+        @include font_size(31,42);
+        color: $black_color;
+        font-weight: 700;
+        font-family: OpenSans;       
+    }
+    &__result{
+        @include size(1184,92);
+        border-radius: border_rad(40);
+        background-color: $trtmnt_bckgr;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+       justify-items: center;
+       @include padding(42,17, 42,42);
+       @include margin(33,0,33,0);
+    }
+    &__text{
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }    
+    &__text_adress{
+        grid-column-start:1;
+        grid-column-end: 3;        
+    }
+    &__butn_choose{
+        @include size(260,58);
+        border: 0;
+        background-color: $main_color;
+        border-radius: border_rad(30);
+        @include margin(24,0,0,0);
+    }
+}
+.buttn__text{
+    @include font_size(31,42);
+    color: $background;
+    font-weight: 700;
+    font-family: OpenSans;
+}
+.filter-board{
+    display: none;
+    position: absolute;
+    top: find-size(1775,100vh,$height-main);
+    right: 0;
+    z-index: 90;
+    &__wrap{
+        border-radius: border_rad(30);
+        @include width(682);
+        background-color: $form_back_color;
+        @include padding(89,50,34,20);
+    }
+    &__header-wrap{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include margin(0,0,61,0);
+    }
+    &__check-date{
+        @include size(39,39);
+    }
+    &__text_title{
+        @include font_size(30,40.85);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+    &__date-wrap{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        @include width(550);
+    }
+    &__input-date{
+        @include padding(0,15,0,25);
+        @include size(179,44);
+        border-radius: border_rad(30);
+        background-color: $pressed_buttton-color;
+        border: 0;
+        @include font_size(24,32.68);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+    &__select-wrap{
+        @include margin(0,0,61,0);
+    }
+    &__select{
+        border-radius: border_rad(30);
+        border: 0;
+        @include margin(20,0,20,0);
+    }
+    &__button-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    &__button{
+        @include size(209,64);
+        border-radius: border_rad(20);
+        background-color: $main_color;
+    }
+    &__buttn-text{
+        @include font_size(23,31.23);
+        color: $background;
+        font-weight: 700;
+        font-family: OpenSans;
+    }
+}
+.rmsc {
+    --rmsc-bg: #cdfcff;
+}
+.dropdown-heading-value{
+    @include font_size(26,30);
+    color: $black_color;
+}
+.dropdown-heading{
+    @include font_size(26,30);
+    color: $black_color;   
+}
+.options{
+    @include font_size(26,30);
+    color: $black_color;  
+}
+.search{
+    @include font_size(26,30);
+    color: $black_color; 
+}

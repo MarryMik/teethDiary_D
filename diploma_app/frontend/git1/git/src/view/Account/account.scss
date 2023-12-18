@@ -1,0 +1,79 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.account{
+    width: 100%;
+    @include margin(290,0,144,0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__wrap{
+        @include size(1503,607);
+        display: flex;
+        flex-direction: row;
+    }
+    &__left{
+        @include width(162);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include margin(0,35,0,0);
+    }
+    &__img{
+        @include size(162,162);
+        @include margin(0,0,37,0);
+    }
+    &__buttns-wrap{
+        display: flex;
+        flex-direction: row;
+    }
+    &__buttn{
+        &_delete{
+            @include size(53,53);
+            background-size: find-size(53, 100vw, $width-main) find-size(53,100vh,$height-main);
+            background-repeat: no-repeat;
+            @include margin(0,20,0,0);
+        }
+        &_edit{
+            @include size(53,53);
+            background-size: find-size(53, 100vw, $width-main) find-size(53,100vh,$height-main);
+            background-repeat: no-repeat;
+        }
+    }
+    &__right{
+        @include size(1186,497);
+        background-color: $form_input_color;
+        border-radius: border_rad(30);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include padding(55,64,55, 56);
+        justify-content: space-between;
+    }
+    &__input-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    &__text{
+        &_tittle{
+            @include font_size(38,52);
+            color: $font_color;
+            font-weight: 400;
+            font-family: OpenSans;
+        }
+    }
+    &__input{
+        @include size(772,55);
+        @include padding(0,15,0,25);
+        border: 0;
+        border-radius: border_rad(20);
+        @include font_size(24,33);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        pointer-events: none;
+    }
+}

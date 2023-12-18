@@ -1,0 +1,35 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.result-box{
+    &__result{
+        @include size(1184,92);
+        border-radius: border_rad(40);
+        background-color: $trtmnt_bckgr;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+       justify-items: center;
+       @include padding(42,17, 42,42);
+       @include margin(33,0,33,0);
+    }
+    &__text{
+        @include font_size(27,37);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+    }
+    &__text_adress{
+        grid-column-start:1 ;
+        grid-column-end: 3;   
+    }
+    &__butn_choose{
+        @include size(260,58);
+        border: 0;
+        background-color: $main_color;
+        border-radius: border_rad(30);
+        @include margin(24,0,0,0);
+    }
+}

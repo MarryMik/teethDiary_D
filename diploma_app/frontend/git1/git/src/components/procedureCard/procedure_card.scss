@@ -1,0 +1,54 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.procedure-card{
+    position: relative;
+    @include margin(44,0,44,0);
+    overflow: hidden;
+    @include width(1510);
+    background-color: $procedure_bcrgr;
+    border-radius: border_rad(34);
+    display: grid;
+    grid-template-columns: 45% 45% 10%;
+    grid-template-rows: 60% 40%;
+    @include padding(46,0,27,0);
+    &__left-wrap{z-index: 12; }
+    &__buttns-wrap{ display:flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    z-index: 12;}
+    .buttn{ &_delete{
+            background-size: find-size(50,100vw, $width-main) find-size(50,100vh, $height-main);
+            cursor: pointer;}
+            &_edit{ background-size: find-size(50,100vw, $width-main) find-size(50,100vh, $height-main);
+            cursor: pointer;}}
+    &__text{ &-title{ @include font_size(37,50);
+                        color: $black_color;
+                        font-weight: 400;
+                        font-family: OpenSans;
+                        @include margin(0,0,0,113);
+                        z-index: 12;}
+        &-data{@include margin(0,0,14,0);
+                @include font_size(48,72);
+                color: $main_color;
+                font-weight: 700;
+                font-family: OpenSans;
+                z-index: 12;}}
+    &__feather_first{@include size(490,490);
+        position: absolute;
+        z-index: 10;
+        @include position_l_b(-138,-48);}
+    &__feather_second{ @include size(490,490);
+        position: absolute;
+        z-index: 10;
+        transform: rotate(110.28deg);
+        @include position_t_l(-113, 1090);
+    }
+    &__file-img{@include size(119,119);
+        background-image: url("../../images/icons/svges/drive_file_insert_icon.svg");
+        background-repeat: no-repeat;
+        background-size: find-size(119,100vw, $width-main) find-size(119,100vh, $height-main);
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 12;
+        display: none;}}

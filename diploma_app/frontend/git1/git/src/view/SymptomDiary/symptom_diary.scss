@@ -1,0 +1,168 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.symptom-history{
+    width: 100%;
+    @include margin(221,0,100,0);
+    display: flex;
+    min-height: find-size(400, 100vh,$height-main);
+    flex-direction: column;
+    align-items: center;
+    &__wrap{
+        @include width(1647);
+        height: fit-content;
+        background-color:$form_input_color;
+        border-radius: border_rad(40);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include padding(25,0,91,0);
+    }
+    &__header-wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include margin(0,0,41,0);
+    }
+    &__text{
+        &_header{
+            @include font_size(45,61);
+            color: $font_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+    }
+    &__buttn_add{
+        @include size(251,76);
+        border: 0;
+        border-radius: border_rad(30);
+        background-color: $main_color;
+        @include font_size(36,49);
+        color: $background;
+        font-weight: 700;
+        font-family: OpenSans;
+        position: absolute;
+        @include position_t_r(0,22);
+    }
+    &__cards{
+        @include width(1446);
+    }
+}
+.new-symptom{
+    @include size(1201,509);
+    background-color: $form_back_color;
+    border-radius: border_rad(40);
+    display: flex;
+    @include padding(10,10,10,10);
+    @include margin(200,0,0,300);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__header-wrap{
+        @include width(1092);
+        @include margin(0,0,30,0);
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-end;       
+    }
+    &__text{
+        &_header{
+            @include font_size(41,55);
+            color: $font_color;
+            font-weight: 700;
+            font-family: OpenSans;
+            @include margin(37,0,0,0);
+        }
+        &_title{
+            @include font_size(33,45);
+            color: $font_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+        &-pain{
+            @include font_size(31,42);
+            color: $font_color;
+            font-weight: 700;
+            font-family: OpenSans;
+        }
+    }    
+    &__input{
+        @include size(696,68);
+        border:0;
+        border-radius: border_rad(30);
+        background-color: $pressed_buttton-color;
+        @include padding(0,25,0,15);
+        @include font_size(20,40);
+        color: $black_color;
+        font-weight: 400;
+        font-family: OpenSans;
+        &_date{
+            @include width(270);
+        }
+        &_time{
+            @include width(270);
+        }
+        &-wrap{
+            display: flex;
+            flex-direction: row;
+            @include width(1002);
+            justify-content: space-between;
+            align-items: center;
+            @include margin(20,30,20,80);
+        }
+    }
+    &__pain{
+        &-wrap{
+            @include width(736);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-circle{
+            @include size(43,43);
+            border-radius: 50%;
+            background-color: $background;
+            &:hover{
+                background-color: $font_color;
+            }
+        }
+    }
+    &__data-circle{
+        @include size(43,43);
+        border-radius: 50%;
+        border: find-size(3, 100vw, $width-main) solid $font_color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__button-wrap{
+        @include width(1092);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        @include margin(40,0,30,0);
+        
+    }
+    &__button{
+        @include size(260,58);
+        border-radius: border_rad(30);
+        background-color: $main_color;
+        &:hover{
+            background-color: $font_color;
+            cursor: pointer;
+        }
+    }
+    &__buttn-text{
+        @include font_size(31,42);
+        color: $background;
+        font-weight: 700;
+        font-family: OpenSans;
+    }
+}
+

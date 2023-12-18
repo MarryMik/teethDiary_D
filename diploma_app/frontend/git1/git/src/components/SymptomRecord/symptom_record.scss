@@ -1,0 +1,62 @@
+@import "../../style/fonts";
+@import "../../style/variables";
+@import "../../style/function";
+.symptom-card{
+    @include size(1446,298);
+    background-color: $record_bcrgr;
+    border-radius: border_rad(40);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include margin(34,0,34,0);
+    &__wrap{
+        min-height: find-size(184,100vh,$height-main);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_primary{
+            @include width(339);
+            @include margin(0,0,0,66);
+        }
+        &_secondary{
+            @include width(270);
+        }
+        &_tertiary{
+            @include width(100);
+        }
+        &_quanternary{
+            @include width(66);
+            @include margin(0,24,0,0);
+            justify-content: center;
+        }
+    }
+    &__text{
+        &_wrap{
+            @include height(100);
+            display: flex;
+            align-items: center;
+        }
+        &_title{
+            @include font_size(40,54);
+            color: $black_color;
+            font-weight: 400;
+            font-family: OpenSans;
+        }
+        &_data{
+            @include font_size(40,54);
+            color: $black_color;
+            font-weight: 700;
+            font-family: OpenSans;   
+        }
+    }
+    &__circle{
+        @include size(100,100);
+        border-radius: 50%;
+        border: find-size(7,100vw, $width-main) solid $black_color;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
